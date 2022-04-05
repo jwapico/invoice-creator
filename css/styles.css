@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 2rem;
+  background-color: #1c1c1c;
+}
+
+main {
+  background-color: #1f2937;
+  color: white;
+  height: auto;
+  padding-block-end: .01rem;
+}
+
+/* Header */
+header {
+  background-image: linear-gradient(
+    60deg,
+    hsl(221, 63%, 53%) 0%,
+    hsl(273deg 45% 57%) 43%,
+    hsl(316deg 48% 56%) 67%,
+    hsl(340deg 67% 62%) 86%,
+    hsl(0deg 72% 67%) 100%
+  );
+  background-size: 250%;
+  color: white;
+  text-align: center;
+  animation: bg-animation 15s infinite alternate;
+  padding: 3rem;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+h1 {
+  margin-block-start: 0;
+}
+
+header p {
+  font-weight: 200;
+}
+
+/* Buttons */
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  width: 100%;
+  margin-block: 2rem;
+}
+
+.btn {
+  color: white;
+  padding-block: 1.2rem;
+  border: none;
+  border-radius: 15px;
+  transition: all .3s;
+  font-size: large;
+  cursor: pointer;
+}
+
+.btn p {
+  opacity: .8;
+  transition: all .3s;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+  box-shadow: 2px 2px 10px #1c1c1c;
+}
+
+.btn:hover p,
+.btn:focus p {
+  opacity: 1;
+  transform: scale(1.06);
+  text-shadow: 1px 1px 20px #1c1c1c;
+}
+
+#btn-1 {
+  background-image: linear-gradient(
+    70deg,
+    hsl(221deg 63% 53%) 0%,
+    hsl(237deg 53% 59%) 50%,
+    hsl(254deg 48% 59%) 100%
+  );
+}
+
+#btn-2 {
+  background-image: linear-gradient(
+    55deg,
+    hsl(264deg 46% 58%) 0%,
+    hsl(294deg 38% 54%) 75%,
+    hsl(319deg 50% 57%) 100%
+  );
+}
+
+#btn-3 {
+  background-image: linear-gradient(
+    55deg,
+    hsl(316deg 50% 55%) 0%,
+    hsl(339deg 68% 62%) 50%,
+    hsl(0deg 72% 67%) 100%
+  );
+}
+
+/* Tasks and Total */
+.content {
+  margin: 2rem;
+}
+
+.items-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.completed-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items__label {
+  font-size: small;
+  opacity: .8;
+  margin-block-end: 1.5rem;
+}
+
+#total-amount {
+  text-align: end;
+  font-size: 35px;
+  margin-block-start: 0;
+}
+
+/* #total-amount::before {
+  content: "$";
+  margin-inline-end: 2px;
+} */
+
+.btn__invoice {
+  width: 100%;
+  margin-block: 2rem;
+  background-image: linear-gradient(
+    60deg,
+    hsl(221, 63%, 53%) 0%,
+    hsl(273deg 45% 57%) 43%,
+    hsl(316deg 48% 56%) 67%,
+    hsl(340deg 67% 62%) 86%,
+    hsl(0deg 72% 67%) 100%
+  );
+  background-size: 250%;
+  color: white;
+  text-align: center;
+  animation: bg-animation 15s infinite alternate;
+  border: none;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.btn__invoice p {
+  margin-inline-start: 6px;
+  transition: all .4s;
+}
+
+.btn__invoice:hover {
+  transform: scale(105%);
+  box-shadow: 2px 2px 10px #1c1c1c;
+}
+
+.btn__invoice:hover img {
+  transform: scale(105%);
+}
+
+.btn__invoice:hover p {
+  transform: scale(105%);
+  text-shadow: 1px 1px 20px #1c1c1c;
+  margin-inline-start: 7px;
+}
+
+.remove {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 11px;
+  font-weight: 200;
+  padding-inline-start: .75rem;
+  position: relative;
+  bottom: 1px;
+  cursor: pointer;
+}
+
+.money-sign {
+  font-weight: 200;
+  margin-inline-end: 2px;
+}

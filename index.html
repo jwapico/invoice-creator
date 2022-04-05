@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Invoice Creator</h1>
+        <p>Thanks for choosing GoodCorp, LLC!</p>
+      </header>
+
+      <div class="content">
+        <section>
+          <div class="btn-container">
+            <button id="btn-1" class="btn"><p>Wash Car: $10</p></button>
+            <button id="btn-2" class="btn"><p>Mow Lawn: $20</p></button>
+            <button id="btn-3" class="btn"><p>Pull Weeds: $30</p></button>
+          </div>
+        </section>
+
+        <section class="items-container">
+          <div id="items-section" class="items__label">
+            <p>TASK</p>
+          </div>
+          <div id="cost-section" class="items__label">
+            <p>TOTAL</p>
+          </div>
+        </section>
+
+        <hr />
+
+        <section class="completed-container">
+          <div class="items__label">
+            <p>NOTES</p>
+          </div>
+          <div class="items__label">
+            <p>TOTAL AMOUNT</p>
+            <h3 id="total-amount"></h3>
+          </div>
+        </section>
+
+        <button id="send-invoice-btn" class="btn__invoice">
+          <img src="assets/Iconmail-icon.svg" alt="" />
+          <p class="btn__invoice__p">Send invoice</p>
+        </button>
+      </div>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
